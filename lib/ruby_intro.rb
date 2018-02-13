@@ -96,7 +96,15 @@ class BookInStock
 
     if(indexOfDecimal == nil ) then
       priceString += ".00"
+      return "$" + priceString
     end
+
+ paddingNumber = priceString.length-1 - indexOfDecimal
+  if(paddingNumber == 1 ) then
+    for i in 1..paddingNumber do
+      priceString+="0"
+    end
+  end
     priceString = "$"+priceString
     return priceString
   end
