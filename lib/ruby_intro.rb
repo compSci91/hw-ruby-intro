@@ -86,8 +86,19 @@ class BookInStock
   end
 
   def price_as_string
-    "$"+@price.to_s
 
+    priceString = @price.to_s
+    indexOfDecimal = priceString.index('.')
+    #
+    # if(@price %1 == 0) then
+    #   priceString += ".00"
+    # end
+
+    if(indexOfDecimal == nil ) then
+      priceString += ".00"
+    end
+    priceString = "$"+priceString
+    return priceString
   end
 
 end
