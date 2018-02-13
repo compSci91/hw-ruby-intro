@@ -57,7 +57,11 @@ def hello(name)
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
+  #puts "Hello!!!!!!: " +  s.upcase[0]
+  if(s.length == 0) then
+    return false
+  end
+  return "BCDFGHJKLMNPQRSTVXZWY".include? s.upcase[0]
 end
 
 def binary_multiple_of_4? s
