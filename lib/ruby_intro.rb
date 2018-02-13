@@ -65,7 +65,11 @@ def starts_with_consonant? s
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
+  if( s =~/\A[01]+\Z/) then
+    return s.to_i(10) % 4 == 0
+  end
+
+  false
 end
 
 # Part 3
